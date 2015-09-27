@@ -41,11 +41,28 @@ def processQuery(query):
     return parsed_result
 
 ## Prompt for user feedback for each of the Top 10 results
+## If any relevant feedback found, put the corresponding result into the 'relevant' list
+## and mark 'has_relev' to 'True'
+## return the 'has_relev' flag and the 'relevant' list
 def getUserFeedback(result):
     ## Show 10 results in loop and get user feedback
-    print 'See Top 10 results below, and please give us your feedback:'
+    print '\nSee Top 10 results below, and please give us your feedback:\n'
     relevant = []
     has_relev = False
+    for i in range(len(result)):
+        print '[Result ' + str(i + 1) + ']'
+        print 'Title:', result[i]['title']
+	print 'URL:', result[i]['url']
+        print 'Description:', result[i]['desp']
+	while True:
+	    ans = raw_input('Is this a relevant result? (y/n) ')
+	    if ans == 'y':
+		has_relev = True
+		relevant.append(result[i])
+		break
+	    if ans == 'n':
+		break
+	print ''
     return has_relev, relevant 
  
 if __name__ == '__main__':
@@ -62,11 +79,11 @@ if __name__ == '__main__':
     query = 'gates'
     result = processQuery(query)
     # print out for debugging
-    print json.dumps(result, indent=4, sort_keys=True)
+    # print json.dumps(result, indent=4, sort_keys=True)
     
     has_relev, relevant = getUserFeedback(result)
     ## If no relevant results, exit the program
     if not has_relev:
+	print 'No relevant result for feedback ... exiting ...\n'
         exit(0)
-
     print json.dumps(relevant, indent=4, sort_keys=True)
