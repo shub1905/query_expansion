@@ -4,22 +4,16 @@
 	Jie Gao (jg3526)
 
 ### NLTK installation:
+Steps below comes from instructions from the course **COMS4805 Natural Language Processing** in Spring 2015.
+
 1. Add NLTK’s location to your default path:
-Add the following line of code to your ~/.bashrc file.
-```
-export PYTHONPATH=$PYTHONPATH:/home/cs4701/python/lib/python2.7/site-packages
-```
-
-After, don’t forget to run:
-```
-source ~/.bashrc
-```
-
+	* Add the following line of code to your ~/.bashrc file.<br />
+	```export PYTHONPATH=$PYTHONPATH:/home/cs4701/python/lib/python2.7/site-packages```
+	* After, don’t forget to run: <br />
+	```source ~/.bashrc```
 2. Create a link to the NLTK files (equivalent to downloading the files yourself)
-Login to your CLIC account and run the following commands in your home directory.
-```
-ln –s ~coms4705/nltk_data nltk_data
-```
+	* Login to your CLIC account and run the following commands in your home directory.<br />
+	```ln –s ~coms4705/nltk_data nltk_data```
 	
 ### References:
 1. **READ** ```Spink, Amanda, Bernard J. Jansen, and H. Cenk Ozmultu. "Use of query reformulation and relevance feedback by Excite users." Internet research 10.4 (2000): 317-328.```
