@@ -29,8 +29,7 @@ def processQuery(query):
     ## Pass in the query string
     ## Get top 10 results
     ## Specify the result format to be json
-    ## Notice to use 'quote' to escaping the string for a URL or else there would be exceptions
-    quoted_query = urllib.quote(' '.join(query))
+    quoted_query = '+'.join(query)
     bingUrl = 'https://api.datamarket.azure.com/Bing/Search/Web?Query=%27' + quoted_query + '%27&$top=10&$format=json'
     accountKeyEnc = base64.b64encode(accountKey + ':' + accountKey)
     headers = {'Authorization': 'Basic ' + accountKeyEnc}
