@@ -1,4 +1,4 @@
-import urllib2
+import urllib, urllib2
 import base64
 import ConfigParser
 import json
@@ -27,7 +27,9 @@ def processQuery(query):
     ## Pass in the query string
     ## Get top 10 results
     ## Specify the result format to be json
-    bingUrl = 'https://api.datamarket.azure.com/Bing/Search/Web?Query=%27' + query + '%27&$top=10&$format=json'
+    ## Notice to use 'quote' to escaping the string for a URL or else there would be exceptions
+    quoted_query = urllib.quote(' '.join(query))
+    bingUrl = 'https://api.datamarket.azure.com/Bing/Search/Web?Query=%27' + quoted_query + '%27&$top=10&$format=json'
     accountKeyEnc = base64.b64encode(accountKey + ':' + accountKey)
     headers = {'Authorization': 'Basic ' + accountKeyEnc}
     req = urllib2.Request(bingUrl, headers = headers)
@@ -42,13 +44,14 @@ def processQuery(query):
 
 ## Prompt for user feedback for each of the Top 10 results
 ## If any relevant feedback found, put the corresponding result into the 'relevant' list
-## and mark 'has_relev' to 'True'
-## return the 'has_relev' flag and the 'relevant' list
-def getUserFeedback(result):
+## and add the counter for precision of this round
+## return the int version of precision 
+def getUserFeedback(result, query, prec_int):
     ## Show 10 results in loop and get user feedback
-    print '\nSee Top 10 results below, and please give us your feedback:\n'
+    print '\nSee Top 10 results for these query keywords: [', ', '.join(query), ']...'
+    print 'Please give us your feedback:\n'
     relevant = []
-    has_relev = False
+    feed_prec_int = 0
     for i in range(len(result)):
         print '[Result ' + str(i + 1) + ']'
         print 'Title:', result[i]['title']
@@ -57,13 +60,13 @@ def getUserFeedback(result):
 	while True:
 	    ans = raw_input('Is this a relevant result? (y/n) ')
 	    if ans == 'y':
-		has_relev = True
+		feed_prec_int += 1
 		relevant.append(result[i])
 		break
 	    if ans == 'n':
 		break
 	print ''
-    return has_relev, relevant 
+    return feed_prec_int, relevant 
  
 if __name__ == '__main__':
     ## Open config file
@@ -75,15 +78,33 @@ if __name__ == '__main__':
     accountKey = ConfigSectionMap("BingAPI")['accountkey']
     # print accountKey
 
-    ## Pass in the query and get the result list
-    query = 'gates'
+    ## Pass in the query keyword list and get the result list
+    # query = ['gates','1234jAsdkfjsl']	# for testing 
+    query = ['gates']
+    print ' '.join(query)
+    precision = 0.5
+    prec_int = precision * 10
     result = processQuery(query)
     # print out for debugging
     # print json.dumps(result, indent=4, sort_keys=True)
-    
-    has_relev, relevant = getUserFeedback(result)
-    ## If no relevant results, exit the program
-    if not has_relev:
+
+    ## Exit when there's less than 10 resuls returned from Bing
+    if len(result) < 10:
+	'Less than 10 results found, exiting ...'
+
+    feed_prec_int, relevant = getUserFeedback(result, query, prec_int)
+
+    ## Check whether to exit the program
+    ## If no relevant result at all, exit
+    if feed_prec_int == 0:
 	print 'No relevant result for feedback ... exiting ...\n'
         exit(0)
+    ## If precision@10 has been reached
+    elif feed_prec_int >= prec_int:
+        print 'Precision@10 has been reached, exiting ...\n'
+	exit(0)
+    ## This is where core of query expansion come in handy
+    else:
+	print 'Thanks for your feedback. We are refining your query ... \n'
+    print "Below are the results that you marked as relevant:"
     print json.dumps(relevant, indent=4, sort_keys=True)
