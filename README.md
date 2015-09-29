@@ -2,6 +2,24 @@
 ### Authors: 
 	Shubham Bansal (sb3766)
 	Jie Gao (jg3526)
+
+### NLTK installation:
+1. Add NLTK’s location to your default path:
+Add the following line of code to your ~/.bashrc file.
+```
+export PYTHONPATH=$PYTHONPATH:/home/cs4701/python/lib/python2.7/site-packages
+```
+
+After, don’t forget to run:
+```
+source ~/.bashrc
+```
+
+2. Create a link to the NLTK files (equivalent to downloading the files yourself)
+Login to your CLIC account and run the following commands in your home directory.
+```
+ln –s ~coms4705/nltk_data nltk_data
+```
 	
 ### References:
 1. **READ** ```Spink, Amanda, Bernard J. Jansen, and H. Cenk Ozmultu. "Use of query reformulation and relevance feedback by Excite users." Internet research 10.4 (2000): 317-328.```
@@ -16,3 +34,5 @@
 2. **READING** ```Boubacar, Abdoulahi, and Zhendong Niu. "Concept Based Query Expansion." Semantics, Knowledge and Grids (SKG), 2013 Ninth International Conference on. IEEE, 2013.```
 
 3. **READING** ```Gan, Lixin, et al. "Query expansion based on concept clique for Markov network information retrieval model." Fuzzy Systems and Knowledge Discovery, 2008. FSKD'08. Fifth International Conference on. Vol. 5. IEEE, 2008.```
+
+4. **READING** ```Carpineto, Claudio, and Giovanni Romano. "A survey of automatic query expansion in information retrieval." ACM Computing Surveys (CSUR) 44.1 (2012): 1.```

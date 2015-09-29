@@ -2,6 +2,8 @@ import urllib, urllib2
 import base64
 import ConfigParser
 import json
+import preprocess # customized in preprocess.py
+import pickle
 
 ## Helper function for reading config file
 ## Source: https://wiki.python.org/moin/ConfigParserExamples
@@ -92,7 +94,7 @@ if __name__ == '__main__':
     if len(result) < 10:
 	'Less than 10 results found, exiting ...'
 
-    feed_prec_int, relevant = getUserFeedback(result, query, prec_int)
+    feed_prec_int, relev_doc = getUserFeedback(result, query, prec_int)
 
     ## Check whether to exit the program
     ## If no relevant result at all, exit
@@ -107,4 +109,13 @@ if __name__ == '__main__':
     else:
 	print 'Thanks for your feedback. We are refining your query ... \n'
     print "Below are the results that you marked as relevant:"
-    print json.dumps(relevant, indent=4, sort_keys=True)
+    print json.dumps(relev_doc, indent=4, sort_keys=True)
+
+    ## Preprocessing for AQE
+    
+    # below for test
+    # for doc in relev_doc:
+    #    print doc
+    # with open('relev_doc.pickle', 'wb') as handle:
+    # pickle.dump(relev_doc, handle)
+    # preprocess.create_index(relev_doc)
