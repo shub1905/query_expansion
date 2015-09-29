@@ -14,3 +14,5 @@
 	* **UNREAD** Tomaiuolo, Nicholas G., and Joan G. Packer. "An Analysis of Internet Search Engines: Assessment of Over 200 Search Queries." Computers in Libraries 16.6 (1996): 58-62.
 
 2. **READING** ```Boubacar, Abdoulahi, and Zhendong Niu. "Concept Based Query Expansion." Semantics, Knowledge and Grids (SKG), 2013 Ninth International Conference on. IEEE, 2013.```
+
+3. **READING** ```Gan, Lixin, et al. "Query expansion based on concept clique for Markov network information retrieval model." Fuzzy Systems and Knowledge Discovery, 2008. FSKD'08. Fifth International Conference on. Vol. 5. IEEE, 2008.```
