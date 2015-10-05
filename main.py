@@ -1,12 +1,11 @@
-import urllib
 import urllib2
 import base64
 import ConfigParser
 import json
 import preprocess  # customized in preprocess.py
-import pickle
-import time
-
+# import pickle
+# import time
+from expansion import Expansion
 # Helper function for reading config file
 # Source: https://wiki.python.org/moin/ConfigParserExamples
 
@@ -60,7 +59,7 @@ def processQueries(query):
     if len(top10) < 10:
         return top10, parsed_result
 
-    for skip in range(0, topUrlCount, 50):
+    for skip in range(0, topUrlCount, topUrlStep):
         bingUrl = 'https://api.datamarket.azure.com/Bing/Search/Web?Query=%27' + \
             quoted_query + '%27&$top=50&$format=json' + '&$skip=' + str(skip)
         parsed_current = processSingleQuery(bingUrl, headers)
@@ -103,48 +102,52 @@ def getUserFeedback(result, query, prec_int):
     return feed_prec_int, relevant
 
 if __name__ == '__main__':
+    query_expand = Expansion()
     # Open config file
     Config = ConfigParser.ConfigParser()
     Config.read('config.ini')
-    # print Config.sections()
 
     # Read accountKey from the config file
     accountKey = ConfigSectionMap("BingAPI")['accountkey']
     topUrlCount = int(ConfigSectionMap("AppParameter")['TopURLCount'.lower()])
+    topUrlStep = int(ConfigSectionMap("AppParameter")['Step'.lower()])
 
     # Pass in the query keyword list and get the result list
     # query = ['gates','1234jAsdkfjsl']	# for testing
-    query = ['gates']
-    print 'Your query: [', ' + '.join(query), ']'
     precision = 0.5
     prec_int = precision * 10
-    top10, result = processQueries(query)
-    print 'Length of top10 list:', len(top10)
-    print 'Length of result list:', len(result)
-    # print out for debugging
-    # print json.dumps(result, indent=4, sort_keys=True)
+    while (True):
+        query = ['gates']
+        print 'Your query: [', ' + '.join(query), ']'
+        top10, result = processQueries(query)
+        print 'Length of top10 list:', len(top10)
+        print 'Length of result list:', len(result)
+        # print out for debugging
+        # print json.dumps(result, indent=4, sort_keys=True)
 
-    # Exit when there's less than 10 resuls returned from Bing
-    if len(top10) < 10:
-        print 'Less than 10 results found, exiting ...'
-        exit(0)
+        # Exit when there's less than 10 resuls returned from Bing
+        if len(top10) < 10:
+            print 'Less than 10 results found, exiting ...'
+            exit(0)
 
-    feed_prec_int, relev_doc = getUserFeedback(top10, query, prec_int)
+        feed_prec_int, relev_doc = getUserFeedback(top10, query, prec_int)
 
-    # Check whether to exit the program
-    # If no relevant result at all, exit
-    if feed_prec_int == 0:
-        print 'No relevant result for feedback ... exiting ...\n'
-        exit(0)
-    # If precision@10 has been reached
-    elif feed_prec_int >= prec_int:
-        print 'Precision@10 has been reached, exiting ...\n'
-        exit(0)
-    # This is where core of query expansion come in handy
-    else:
-        print 'Thanks for your feedback. We are refining your query ... \n'
-        print "Below are the results that you marked as relevant:"
-        print json.dumps(relev_doc, indent=4, sort_keys=True)
+        # Check whether to exit the program
+        # If no relevant result at all, exit
+        if feed_prec_int == 0:
+            print 'No relevant result for feedback ... exiting ...\n'
+            exit(0)
+        # If precision@10 has been reached
+        elif feed_prec_int >= prec_int:
+            print 'Precision@10 has been reached, exiting ...\n'
+            exit(0)
+        # This is where core of query expansion come in handy
+        else:
+            print 'Thanks for your feedback. We are refining your query ... \n'
+            print "Below are the results that you marked as relevant:"
+            query_expand.increment(relev_doc)
+            # print json.dumps(relev_doc, indent=4, sort_keys=True)
+
 
     # Preprocessing for AQE
 

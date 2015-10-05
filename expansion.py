@@ -1,17 +1,22 @@
-import pickle
+import json
 import preprocess
-import nltk
 
-def run(all_docs):
-    # get term-doc index
-    return preprocess.create_index(all_docs)
+class Expansion:
 
-if __name__ == '__main__':
-    # with open('relev_doc.pickle', 'rb') as handle:
-    #    docs = pickle.load(handle)
+  def increment(self, docs_list):
+    print json.dumps(docs_list, indent=4)
+    print preprocess.create_index(docs_list)
 
-    with open('result.pickle', 'rb') as handle:
-	all_docs = pickle.load(handle)
 
-    term_doc_index = run(all_docs)
+# def run(all_docs):
+#   # get term-doc index
+#   return preprocess.create_index(all_docs)
 
+# if __name__ == '__main__':
+#   # with open('relev_doc.pickle', 'rb') as handle:
+#   #    docs = pickle.load(handle)
+
+#   with open('result.pickle', 'rb') as handle:
+#     all_docs = pickle.load(handle)
+
+#   term_doc_index = run(all_docs)
