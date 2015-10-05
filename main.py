@@ -2,9 +2,8 @@ import urllib2
 import base64
 import ConfigParser
 import json
-import preprocess  # customized in preprocess.py
-# import pickle
-# import time
+import pickle
+import sys
 from expansion import Expansion
 # Helper function for reading config file
 # Source: https://wiki.python.org/moin/ConfigParserExamples
@@ -65,12 +64,8 @@ def processQueries(query):
         parsed_current = processSingleQuery(bingUrl, headers)
         parsed_current = [r['Url'] for r in parsed_current]
         parsed_result.extend(parsed_current)
-        # print len(parsed_current)
-        # time.sleep(1)
 
     print len(parsed_result)
-    # for r in parsed_result:
-    #    print r
     return top10, parsed_result
 
 # Prompt for user feedback for each of the Top 10 results
@@ -107,6 +102,9 @@ if __name__ == '__main__':
     Config = ConfigParser.ConfigParser()
     Config.read('config.ini')
 
+    #arguments check
+    if len(sys.argv) < 3:
+        print """Correct Usage: python main.py precision search_term"""
     # Read accountKey from the config file
     accountKey = ConfigSectionMap("BingAPI")['accountkey']
     topUrlCount = int(ConfigSectionMap("AppParameter")['TopURLCount'.lower()])
@@ -114,10 +112,10 @@ if __name__ == '__main__':
 
     # Pass in the query keyword list and get the result list
     # query = ['gates','1234jAsdkfjsl']	# for testing
-    precision = 0.5
+    precision = float(sys.argv[1])
     prec_int = precision * 10
+    query = sys.argv[2:]
     while (True):
-        query = ['gates']
         print 'Your query: [', ' + '.join(query), ']'
         top10, result = processQueries(query)
         print 'Length of top10 list:', len(top10)
@@ -145,8 +143,10 @@ if __name__ == '__main__':
         else:
             print 'Thanks for your feedback. We are refining your query ... \n'
             print "Below are the results that you marked as relevant:"
-            query_expand.increment(relev_doc)
-            # print json.dumps(relev_doc, indent=4, sort_keys=True)
+            handle = open('relev_doc.pickle','wb')
+            pickle.dump(relev_doc, handle)
+            handle.close()
+            query = query_expand.increment(query, relev_doc)
 
 
     # Preprocessing for AQE

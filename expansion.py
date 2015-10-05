@@ -1,11 +1,19 @@
-import json
 import preprocess
+
 
 class Expansion:
 
-  def increment(self, docs_list):
-    print json.dumps(docs_list, indent=4)
-    print preprocess.create_index(docs_list)
+  def increment(self, query, docs_list):
+    doc_tokens = preprocess.create_index(docs_list)
+    freq_counter = preprocess.create_reverse_index(doc_tokens)
+    counter = 0
+    for item in freq_counter:
+      if item[0] not in query:
+        query.append(item[0])
+        counter += 1
+        if counter >= 2:
+          break
+    return query
 
 
 # def run(all_docs):
