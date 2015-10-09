@@ -1,11 +1,6 @@
-import urllib
-import urllib2
-import base64
 import json
-import preprocess  # customized in preprocess.py
-import expansion   # customized in expansion.py
-import pickle
-import time
+import preprocess
+import expansion
 import queryBing
 import sys
 
@@ -55,7 +50,9 @@ def rf_run(query_list, precision_int, accountKey, transcript_file):
     # b. Get user feedback 
     feed_prec_int, relev_docs_idx = getUserFeedback(result, query_list, prec_int)
 
+    #Generate trascript of the run
     generate_transcript(query_list, feed_prec_int, relev_docs_idx, result, transcript_file)
+
     # Check whether to exit the program
     # If no relevant result at all, exit
     if feed_prec_int == 0:
@@ -79,6 +76,7 @@ def rf_run(query_list, precision_int, accountKey, transcript_file):
                                         inverted_index, max_tf,
                                         len(result), query_list)
     # d. Expansion - Rocchio algorithm
+    # parameters taken from reference text, check README for more info
     new_query = expansion.relevance_feedback_rocchio(
                 	tf_idf_matrix, query_vec, relev_docs_idx, term_list,
                 	query_list, 1, 0.75, 0.15)

@@ -1,15 +1,11 @@
 import pickle
-import nltk
-import urllib2
-import json
-import time, pudb
 import math
-import operator
 import numpy as np
 from nltk.tokenize import RegexpTokenizer
 from nltk.corpus import stopwords
 from nltk.stem.snowball import SnowballStemmer
 from collections import defaultdict
+
 def remove_stop_words(tokens):
     stopset = set(stopwords.words('english'))
     removed = [t for t in tokens if not t in stopset and len(t) != 1]

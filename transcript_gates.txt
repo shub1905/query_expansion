@@ -1,0 +1,128 @@
+===============================================================
+Precision = 0.3
+query: gates
+Results:
+Relevant: NO
+{
+    "url": "http://www.gates.com/", 
+    "desp": "Gates Corporation is Powering Progress\u2122 in the Oil & Gas, Energy, Mining, Marine, Agriculture, Transportation and Automotive Industries.", 
+    "title": "Gates Corporation"
+}
+Relevant: NO
+{
+    "url": "http://www.gatecrafters.com/design_your_gates.aspx", 
+    "desp": "Driveway Gates - Automatic Gates The high-quality driveway gates from GateCrafters.com come in a wide variety of options to ...", 
+    "title": "Driveway Gates | Automatic Gates | Electric Gates"
+}
+Relevant: NO
+{
+    "url": "http://www.gatesbbq.com/", 
+    "desp": "With the tantalizing hickory barbecue smell drawing the customer through the ranch-style doors, he is immediately greeted.", 
+    "title": "Gates Bar B.Q."
+}
+Relevant: NO
+{
+    "url": "http://www.amazon.com/s?ie=UTF8&page=1&rh=i%3Aaps%2Ck%3Agates", 
+    "desp": "Product Features Expands to become a 192-inch wall mounted gate or free standing barrier", 
+    "title": "Amazon.com: gates"
+}
+Relevant: YES
+{
+    "url": "http://en.wikipedia.org/wiki/Bill_Gates", 
+    "desp": "William Henry \"Bill\" Gates III (born October 28, 1955) is an American business magnate, philanthropist, investor, computer programmer, and inventor. In 1975, Gates co ...", 
+    "title": "Bill Gates - Wikipedia, the free encyclopedia"
+}
+Relevant: NO
+{
+    "url": "https://www.facebook.com/gatesnj", 
+    "desp": "gates. 13,913 likes \u00b7 194 talking about this. www.gatesnj.com. Facebook logo. Email or Phone: Password: Keep me logged in. Forgot your password? Sign Up. gates", 
+    "title": "gates"
+}
+Relevant: NO
+{
+    "url": "http://en.wikipedia.org/wiki/Gates", 
+    "desp": "Gates may refer to: Contents 1 People 2 Places 3 Art and entertainment 4 See also People Gates (surname) Gates Brown, American baseball player Gates McFadden ...", 
+    "title": "Gates - Wikipedia, the free encyclopedia"
+}
+Relevant: YES
+{
+    "url": "http://www.forbes.com/profile/bill-gates/", 
+    "desp": "Forty years ago, when Bill Gates and Paul Allen launched Microsoft, Gates' goal of getting a computer on every person's desk seemed audacious.", 
+    "title": "Bill Gates - Forbes"
+}
+Relevant: YES
+{
+    "url": "http://www.gatesfoundation.org/", 
+    "desp": "The Gates Foundation\u2019s effort to eradicate polio offers the chance to protect millions of children from paralysis forever.", 
+    "title": "Bill & Melinda Gates Foundation"
+}
+Relevant: NO
+{
+    "url": "http://www.amazon.com/b?ie=UTF8&node=166868011", 
+    "desp": "Online shopping for Gates & Doorways from a great selection at Baby Products Store.", 
+    "title": "Amazon.com: Gates & Doorways: Baby Products"
+}
+===============================================================
+Precision = 1.0
+query: gates bill computer
+Results:
+Relevant: YES
+{
+    "url": "http://en.wikipedia.org/wiki/Bill_Gates", 
+    "desp": "William Henry \"Bill\" Gates III (born October 28, 1955) is an American business magnate, philanthropist, investor, computer programmer, and inventor.", 
+    "title": "Bill Gates - Wikipedia, the free encyclopedia"
+}
+Relevant: YES
+{
+    "url": "http://www.biography.com/people/bill-gates-9307520", 
+    "desp": "Entrepreneur Bill Gates founded the world's largest software business, Microsoft, with Paul Allen, and subsequently became one of the richest men in the world.", 
+    "title": "Bill Gates - Business Leader, Entrepreneur, Philanthropist ..."
+}
+Relevant: YES
+{
+    "url": "http://www.britannica.com/biography/Bill-Gates", 
+    "desp": "American computer programmer and entrepreneur who cofounded Microsoft Corporation, the world\u2019s largest personal-computer software company. Gates wrote his first ...", 
+    "title": "Bill Gates | biography - American computer programmer ..."
+}
+Relevant: YES
+{
+    "url": "http://www.computerhope.com/people/bill_gates.htm", 
+    "desp": "Short biography of Bill Gates, the founder of Microsoft.", 
+    "title": "Bill Gates - Computer Hope"
+}
+Relevant: YES
+{
+    "url": "http://www.forbes.com/profile/bill-gates/", 
+    "desp": "Forty years ago, when Bill Gates and Paul Allen launched Microsoft, Gates' goal of getting a computer on every person's desk seemed audacious.", 
+    "title": "Bill Gates - Forbes"
+}
+Relevant: YES
+{
+    "url": "http://www.computerhistory.org/honorary/Bill,Gates/", 
+    "desp": "William (Bill) H. Gates is chairman of Microsoft Corporation, the worldwide leader in software, services and solutions that help people and businesses realize their ...", 
+    "title": "Bill Gates | Computer History Museum"
+}
+Relevant: YES
+{
+    "url": "http://faculty.wagner.edu/lori-weintrob/bill-gates-the-birth-of-the-computer/", 
+    "desp": "It\u2019s fine to celebrate success but it is more important to heed the lessons of failure.- Bill Gates ...", 
+    "title": "Bill Gates- The birth of the computer | Lori Weintrob"
+}
+Relevant: YES
+{
+    "url": "http://www.eweek.com/cloud/bill-gates-says-were-living-in-a-golden-age-of-computer-science", 
+    "desp": "Going forward, Gates envisions that progress in user interfaces, modeling, machine learning and other computing disciplines will result in a \"powerful ...", 
+    "title": "Bill Gates Says We're Living in a 'Golden Age of Computer ..."
+}
+Relevant: YES
+{
+    "url": "http://inventors.about.com/od/gstartinventors/a/Bill_Gates.htm", 
+    "desp": "Bill Gates came from a family of entrepreneurship and high-spirited liveliness. William Henry Gates III was born in Seattle, Washington on October 28th, 1955.", 
+    "title": "Bill Gates - Biography - About.com Money"
+}
+Relevant: YES
+{
+    "url": "http://www.howstuffworks.com/tech-myths/5-myths-about-bill-gates3.htm", 
+    "desp": "3: Bill Gates Said 640K RAM Was Enough -- for Anyone - Do you know the facts from the myths about Bill Gates? Take a look at this list of five myths about Bill Gates ...", 
+    "title": "Top 5 Myths About Bill Gates - HowStuffWorks"
+}

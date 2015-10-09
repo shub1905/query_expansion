@@ -1,0 +1,128 @@
+===============================================================
+Precision = 0.4
+query: musk
+Results:
+Relevant: YES
+{
+    "url": "http://gizmodo.com/elon-musk-dieselgate-proves-its-time-to-go-electric-1733163688", 
+    "desp": "Of course, that new technology Musk is referring to here is electric cars. But despite his obvious bias on the matter, the man may be onto something.", 
+    "title": "Elon Musk: Dieselgate Proves It's Time to Go Electric"
+}
+Relevant: YES
+{
+    "url": "http://time.com/4050048/elon-musk-climate-change/", 
+    "desp": "Climate change could create a refugee crisis far worse than the one currently unfolding in Europe, Elon Musk warned Thursday. The Tesla CEO gave a speech in Berlin in ...", 
+    "title": "Elon Musk: Climate Change Will Bring Worse Refugee Crisis"
+}
+Relevant: NO
+{
+    "url": "http://en.wikipedia.org/wiki/Musk", 
+    "desp": "Musk is a class of aromatic substances commonly used as base notes in perfumery. They include glandular secretions from animals such as the musk deer, numerous plants ...", 
+    "title": "Musk - Wikipedia, the free encyclopedia"
+}
+Relevant: YES
+{
+    "url": "http://en.wikipedia.org/wiki/Elon_Musk", 
+    "desp": "Elon Reeve Musk (born June 28, 1971) is a South African-born Canadian-American business magnate, engineer, inventor and investor. [14] He is the CEO and CTO of SpaceX ...", 
+    "title": "Elon Musk - Wikipedia, the free encyclopedia"
+}
+Relevant: NO
+{
+    "url": "http://dictionary.reference.com/browse/musk", 
+    "desp": "noun 1. a substance secreted in a glandular sac under the skin of the abdomen of the male musk deer, having a strong odor, and used in perfumery. 2. an artificial ...", 
+    "title": "Musk | Define Musk at Dictionary.com"
+}
+Relevant: YES
+{
+    "url": "https://twitter.com/ElonMusk", 
+    "desp": "Elon Musk-backed SolarCity claims to have built industry's most efficient solar panel http://www. theverge.com/2015/10/2/9439 173/elon-musk-backed-solarcity-claims-to ...", 
+    "title": "Elon Musk (@elonmusk) | Twitter"
+}
+Relevant: NO
+{
+    "url": "https://www.facebook.com/MUSK.DISCO", 
+    "desp": "MUSK are Lennart D\u00f6ring and Gerald Zollner, who met in Berlin's nightlife back in 2009. Soon after they went through the history of dancemusic, ...", 
+    "title": "MUSK"
+}
+Relevant: NO
+{
+    "url": "http://www.fragrantica.com/notes/Musk-4.html", 
+    "desp": "Musk is a whole class of fragrant substances used as base notes in perfumery. This wonderful animalistic note creates a groundwork on which the rest of the aromatic ...", 
+    "title": "Musk perfume ingredient, Musk fragrance and essential oils ..."
+}
+Relevant: NO
+{
+    "url": "http://www.merriam-webster.com/dictionary/musk", 
+    "desp": "Definition of MUSK for Kids: a strong-smelling material that is used in perfumes and is obtained from a gland of an Asian deer (musk deer) or is prepared artificially", 
+    "title": "Musk | Definition of musk by Merriam-Webster"
+}
+Relevant: NO
+{
+    "url": "http://www.amazon.com/s?ie=UTF8&page=1&rh=n%3A3760911%2Ck%3Aperfume%20musk", 
+    "desp": "Online shopping from a great selection at Beauty Store. ... Avany 100% Pure Uncut Alcohol Free Roll on Body Oil Perfume and Colonge, Egyptian Musk 0.33oz", 
+    "title": "Amazon.com: perfume musk: Beauty"
+}
+===============================================================
+Precision = 1.0
+query: musk elon electric
+Results:
+Relevant: YES
+{
+    "url": "http://en.wikipedia.org/wiki/Elon_Musk", 
+    "desp": "Elon Reeve Musk (born June 28, 1971) is a South African-born Canadian-American business magnate, engineer, inventor and investor. [14] He is the CEO and CTO of SpaceX ...", 
+    "title": "Elon Musk - Wikipedia, the free encyclopedia"
+}
+Relevant: YES
+{
+    "url": "http://www.forbes.com/profile/elon-musk/", 
+    "desp": "Elon Musk's meteoric ride hit a speed bump in June when one of his SpaceX rockets, on its way to resupply the International Space Station, exploded two minutes into ...", 
+    "title": "Elon Musk - Forbes"
+}
+Relevant: YES
+{
+    "url": "http://www.engadget.com/2015/09/26/elon-musk-on-electric-car-range-upgrades/", 
+    "desp": "Range anxiety may keep you from driving an electric car right now, but Tesla chief Elon Musk doesn't expect that to be a problem for very long. When ...", 
+    "title": "Elon Musk hopes to conquer electric car range limits by 2020"
+}
+Relevant: YES
+{
+    "url": "http://www.fool.com/investing/general/2015/09/27/tesla-ceo-elon-musk-on-electric-competition-im-gla.aspx", 
+    "desp": "Tesla CEO Elon Musk on New Electric Competition: I'm Glad Elon Musk doesn't fear recently announced electric vehicles. In fact, he hopes automakers ...", 
+    "title": "Tesla CEO Elon Musk on New Electric Competition: I'm Glad ..."
+}
+Relevant: YES
+{
+    "url": "http://money.cnn.com/technology/elonmusk/", 
+    "desp": "Elon Musk is the man of the future. ... Watch the evolution of electric charging stations In 2010 there were only a few hundred charging stations in the United States ...", 
+    "title": "Elon. Evolution - CNNMoney"
+}
+Relevant: YES
+{
+    "url": "http://www.ted.com/talks/elon_musk_the_mind_behind_tesla_spacex_solarcity", 
+    "desp": "Entrepreneur Elon Musk is a man with many plans. The founder of PayPal, Tesla Motors and SpaceX sits down with TED curator Chris Anderson to share details about his ...", 
+    "title": "Elon Musk: The mind behind Tesla, SpaceX, SolarCity ..."
+}
+Relevant: YES
+{
+    "url": "http://www.usatoday.com/story/money/cars/2015/09/02/tesla-model-s-x-3-elon-musk/71607380/", 
+    "desp": "Tesla CEO Elon Musk announced via Twitter Wednesday that the company's mass-market electric car, the Model 3, will be unveiled next March with a projected ...", 
+    "title": "Tesla's Elon Musk sets March for new electric car debut"
+}
+Relevant: YES
+{
+    "url": "http://www.cnet.com/news/elon-musk-reveals-when-you-can-order-a-tesla-model-3-electric-car/", 
+    "desp": "Elon Musk reveals when you can order a Tesla Model 3 electric car. Tesla's CEO tweets a few details about the company's upcoming electric car, billed as ...", 
+    "title": "Elon Musk reveals when you can order a Tesla Model 3 ..."
+}
+Relevant: YES
+{
+    "url": "http://www.businessinsider.com/elon-musk-losing-tesla-engineers-apple-car-2015-10", 
+    "desp": "Tesla Motors CEO Elon Musk doesn't think very much of Apple's reported plan to build an electric car, he revealed in an interview with German newspaper ...", 
+    "title": "Elon Musk on losing Tesla engineers to Apple car ..."
+}
+Relevant: YES
+{
+    "url": "http://www.macrumors.com/2015/10/08/elon-musk-apple-hires-fired-tesla-workers/", 
+    "desp": "In a new interview with German newspaper Handelsblatt (via Business Insider), Tesla CEO Elon Musk spoke about his thoughts on the much-rumored Apple Car.", 
+    "title": "Elon Musk: If You Don't Make It at Tesla, You Go Work at ..."
+}

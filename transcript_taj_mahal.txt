@@ -1,0 +1,128 @@
+===============================================================
+Precision = 0.5
+query: taj mahal
+Results:
+Relevant: NO
+{
+    "url": "http://en.wikipedia.org/wiki/Taj_Mahal", 
+    "desp": "The Taj Mahal is a white marble mausoleum located on the southern bank of the Yamuna River in the Indian city of Agra. It was commissioned in 1632 by the Mughal ...", 
+    "title": "Taj Mahal - Wikipedia, the free encyclopedia"
+}
+Relevant: NO
+{
+    "url": "http://www.history.com/topics/taj-mahal", 
+    "desp": "Find out more about the history of The Taj Mahal, including videos, interesting articles, pictures, historical features and more. Get all the facts on HISTORY.com", 
+    "title": "The Taj Mahal - Facts & Summary - HISTORY.com"
+}
+Relevant: NO
+{
+    "url": "http://www.trumptaj.com/", 
+    "desp": "For five star Atlantic City Casino hotels, Trump Taj Mahal Casino Hotel offers restaurants, nightlife and a casino floor you can't resist. Explore our Atlantic City ...", 
+    "title": "Atlantic City New Jersey Casino Hotels | Trump Taj Mahal ..."
+}
+Relevant: NO
+{
+    "url": "http://tajmahal.gov.in/", 
+    "desp": "Official website by Department of Tourism, Government of Uttar Pradesh. Details about Taj Mahal, ticketing, tours, and tourist information.", 
+    "title": "Welcome To Official WebSite of Taj Mahal-U.P.Tourism"
+}
+Relevant: NO
+{
+    "url": "http://www.tajmahal.com/", 
+    "desp": "Taj Mahal, Taj Mahal history, taj mahal location, pictures, information, taj mahal tours, tickets and packages. Taj Mahal India", 
+    "title": "Taj Mahal India"
+}
+Relevant: YES
+{
+    "url": "http://www.tajblues.com/", 
+    "desp": "Official site includes news, tour schedule, discography, audio/video and pictures.", 
+    "title": "An International Treasure - Taj Mahal"
+}
+Relevant: YES
+{
+    "url": "http://www.allmusic.com/artist/taj-mahal-mn0000790604", 
+    "desp": "Find Taj Mahal bio, music, credits, awards, & streaming radio on AllMusic - A guitarist and singer/songwriter who took an\u2026", 
+    "title": "Taj Mahal | Biography, Albums, & Streaming Radio | AllMusic"
+}
+Relevant: YES
+{
+    "url": "http://www.last.fm/music/Taj+Mahal", 
+    "desp": "Taj Mahal (born Henry Saint Clair Fredericks in New York City on May 17, 1942) is an American Grammy Award-winning blues musician who incorporates elements of world ...", 
+    "title": "Taj Mahal \u2014 Free listening, videos, concerts, stats and ..."
+}
+Relevant: YES
+{
+    "url": "http://www.amazon.com/Taj-Mahal/e/B000APY7PY", 
+    "desp": "Visit Amazon.com's Taj Mahal Store to shop for Taj Mahal albums (CD, MP3, Vinyl), concert tickets, and other Taj Mahal-related products (DVDs, Books, T-shirts). Also ...", 
+    "title": "Amazon.com: Taj Mahal: Songs, Albums, Pictures, Bios"
+}
+Relevant: YES
+{
+    "url": "http://en.wikipedia.org/wiki/Taj_Mahal_(musician)", 
+    "desp": "Henry Saint Clair Fredericks (born May 17, 1942), who uses the stage name Taj Mahal, is an American blues musician. He often incorporates elements of world music into ...", 
+    "title": "Taj Mahal (musician) - Wikipedia, the free encyclopedia"
+}
+===============================================================
+Precision = 1.0
+query: mahal taj musician albums
+Results:
+Relevant: YES
+{
+    "url": "http://en.wikipedia.org/wiki/Taj_Mahal_(musician)", 
+    "desp": "Henry Saint Clair Fredericks (born May 17, 1942), who uses the stage name Taj Mahal, is an American blues musician. He often incorporates elements of world music into ...", 
+    "title": "Taj Mahal (musician) - Wikipedia, the free encyclopedia"
+}
+Relevant: YES
+{
+    "url": "http://www.discogs.com/artist/15158-Taj-Mahal", 
+    "desp": "Complete your Taj Mahal record collection. Discover Taj Mahal's full discography. Shop new and used Vinyl and CDs.", 
+    "title": "Taj Mahal Discography at Discogs"
+}
+Relevant: YES
+{
+    "url": "http://www.allmusic.com/artist/taj-mahal-mn0000790604", 
+    "desp": "Find Taj Mahal bio, music, credits, awards, & streaming radio on AllMusic - A guitarist and singer/songwriter who took an\u2026", 
+    "title": "Taj Mahal | Biography, Albums, & Streaming Radio | AllMusic"
+}
+Relevant: YES
+{
+    "url": "http://www.amazon.com/Taj-Mahal/e/B000APY7PY", 
+    "desp": "Visit Amazon.com's Taj Mahal Store to shop for Taj Mahal albums (CD, MP3, Vinyl), concert tickets, and other Taj Mahal-related products (DVDs, Books, T-shirts). Also ...", 
+    "title": "Amazon.com: Taj Mahal: Songs, Albums, Pictures, Bios"
+}
+Relevant: YES
+{
+    "url": "http://www.tajblues.com/discography/", 
+    "desp": "7 Discography - Taj Mahal page page-id-7 page ... 2001 Live from the Beacon Theatre NYC Album Taj Mahal ... The latest in musical explorations for The Taj Mahal ...", 
+    "title": "Discography - Taj Mahal"
+}
+Relevant: YES
+{
+    "url": "http://www.naturalgeographicmagazine.com/q/Taj_Mahal_(musician)_live_albums", 
+    "desp": "The Real Thing (Taj Mahal album) The Real Thing is a 1971 live album by Taj Mahal. It was recorded on February 13, 1971 at the Fillmore East in New York City and ...", 
+    "title": "Taj Mahal (musician) live albums"
+}
+Relevant: YES
+{
+    "url": "http://www.allmusic.com/artist/taj-mahal-mn0000790604/discography", 
+    "desp": "Find Taj Mahal discography, albums and singles on AllMusic", 
+    "title": "Taj Mahal | Album Discography | AllMusic"
+}
+Relevant: YES
+{
+    "url": "http://en.wikipedia.org/wiki/Taj_Mahal_(album)", 
+    "desp": "Taj Mahal is the debut American blues album by Taj Mahal.", 
+    "title": "Taj Mahal (album) - Wikipedia, the free encyclopedia"
+}
+Relevant: YES
+{
+    "url": "http://www.inwarez.org/showthread.php?1585965-Taj-Mahal-Discography-(1968-2008)", 
+    "desp": "Artist: Taj Mahal Title Of Album: Discography Year Of Release: 1968-2008 Genre: Blues, World music, R&B, Soul Blues, Blues Rock, Reggae Quality: MP3", 
+    "title": "Taj Mahal Discography (1968-2008)"
+}
+Relevant: YES
+{
+    "url": "http://www.amazon.com/Taj-Mahal-Vinyl-TAJ-MAHAL/dp/B000B6TR9I", 
+    "desp": "It's hard to believe that 40 years have elapsed since Taj Mahal recorded his self-titled album. I can honestly say that Taj's debut album DID change my life because ...", 
+    "title": "TAJ MAHAL - Taj Mahal [Vinyl] - Amazon.com Music"
+}
