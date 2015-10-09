@@ -56,6 +56,7 @@ def create_index_for_all_docs(result):
     for i in range(len(result)):
 	title_tokens, desp_tokens = get_tokens_for_single_doc(result[i])
 	## Update the dictionary
+	## different weights can be assigned to title and body terms, here they are kept equal
 	for t in title_tokens:
 	    if t not in inverted_index:
 		inverted_index[t] = defaultdict(int)
@@ -72,9 +73,7 @@ def create_index_for_all_docs(result):
 
 def create_tf_idf_matrix(inverted_index, max_tf, num_doc, query_list):
     print "Creating document-term matrix according to the inverted index ..."
-    # print '\n'
     query_dict = set(query_list)
-    # print query_dict
     term_list = inverted_index.keys()
     tf_idf_matrix = []
     query_vec = [0] * len(term_list)
@@ -88,10 +87,8 @@ def create_tf_idf_matrix(inverted_index, max_tf, num_doc, query_list):
 	    cur_vec[doc_idx] = tf * cur_idf
 	tf_idf_matrix.append(cur_vec)
 	if term_list[i] in query_dict:
-	    # pudb.set_trace()
       	    query_vec[i] = cur_idf
-	# print term, cur_idf, cur_inverted
-	# print cur_vec
+
     # transpose - document to words
     tf_idf_matrix = [list(x) for x in zip(*tf_idf_matrix)]
     # cosine normalization
@@ -112,8 +109,6 @@ if __name__ == '__main__':
     # main starts from here
     # Get inverted index for each term in the result set
     inverted_index, max_tf = create_index_for_all_docs(result)
-    # for i in inverted_index:
-    # print i, inverted_index[i]
 
     # Get tf*idf weight matrix according to the inverted index
     tf_idf_matrix, term_list, query_vec = create_tf_idf_matrix(

@@ -87,7 +87,7 @@ def generate_transcript(query_list, feed_prec_int, relev_docs_idx, result, trans
     string_to_publish += 'Precision = {}\n'.format(feed_prec_int/10.0)
     string_to_publish += 'query: {}\n'.format(' '.join(query_list))
     string_to_publish += 'Results:\n'
-    for idx,res in enumerate(result):
+    for idx,res in enumerate(result[:10]):
         if idx in relev_docs_idx:
             string_to_publish += 'Relevant: YES\n'
         else:

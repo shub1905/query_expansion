@@ -12,17 +12,8 @@ expansion.py - module that applies Rocchio's relevance feedback algorithm for qu
 README.txt - documentation
 
 c) Instructions for running the program:
-	1. NLTK configuration on CLIC machines
-	Steps below comes from instructions from the course COMS4805 Natural Language Processing in Spring 2015.
-		1) Add the following line of code to your ~/.bashrc file.
-			export PYTHONPATH=$PYTHONPATH:/home/cs4701/python/lib/python2.7/site-packages
-		2) After, don’t forget to run:
-			source ~/.bashrc
-		3) Login to your CLIC account.
-		4) Run the following commands in your home directory.
-        		ln –s /home/coms4705/nltk_data/ nltk_data
-	2. Run the program
-    	(Please insert instructions here)
+	To be run on clic machines only
+	python main.py <Account_key> <precision> <query>
 
 d) e) Internal Design & Query-modification method
 
@@ -65,6 +56,4 @@ v2+SSNBtR6FCjUsVvr1uh0oQr99PA3WU7RxbP3g6fzg
 
 g) References:
 Christopher D. Manning, Prabhakar Raghavan and Hinrich Schütze, Introduction to Information Retrieval, Cambridge University Press. 2008. Available electronically at http://nlp.stanford.edu/IR-book/. Chapter 6 ("Scoring, Term Weighting, and the Vector Space Model") and (Chapter 9, "Relevance Feedback & Query Expansion).
-
-(Please add and revise freely)
 
