@@ -2,7 +2,7 @@ import pickle
 import nltk
 import urllib2
 import json
-import time
+import time, pudb
 import math
 import operator
 import numpy as np
@@ -65,7 +65,7 @@ def create_index_for_all_docs(result):
 def create_tf_idf_matrix(inverted_index, max_tf, num_doc, query_list):
     print "Creating document-term matrix according to the inverted index ..."
     # print '\n'
-    query_dict = {q for q in query_list}
+    query_dict = set(query_list)
     # print query_dict
     term_list = inverted_index.keys()
     tf_idf_matrix = []
@@ -74,12 +74,13 @@ def create_tf_idf_matrix(inverted_index, max_tf, num_doc, query_list):
     for i in range(len(term_list)):
 	cur_inverted = inverted_index[term_list[i]]
 	cur_vec = [0] * num_doc
-	cur_idf = logN - math.log(len(cur_inverted), 2)
+	cur_idf = logN - math.log(len(cur_inverted), 2) + 1
 	for doc_idx in cur_inverted:
 	    tf = cur_inverted[doc_idx]	# could apply SMART variant here
 	    cur_vec[doc_idx] = tf * cur_idf
 	tf_idf_matrix.append(cur_vec)
 	if term_list[i] in query_dict:
+	    # pudb.set_trace()
       	    query_vec[i] = cur_idf
 	# print term, cur_idf, cur_inverted
 	# print cur_vec

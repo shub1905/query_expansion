@@ -7,6 +7,7 @@ import expansion   # customized in expansion.py
 import pickle
 import time
 import queryBing
+import sys
 
 # Prompt for user feedback for each of the Top 10 results
 # If any relevant feedback found, put the corresponding result into the 'relevant' list
@@ -43,7 +44,7 @@ def getUserFeedback(result, query, prec_int):
 # c. Preprocess - build inverted index
 # d. Expansion - Rocchio algorithm
 
-def rf_run(query_list, precision_int, accountKey):
+def rf_run(query_list, precision_int, accountKey, transcript_file):
     # a. Get query results from Bing
     result = queryBing.processQuery(query_list, accountKey)
     # Exit when there's less than 10 resuls returned from Bing
@@ -54,6 +55,7 @@ def rf_run(query_list, precision_int, accountKey):
     # b. Get user feedback 
     feed_prec_int, relev_docs_idx = getUserFeedback(result, query_list, prec_int)
 
+    generate_transcript(query_list, feed_prec_int, relev_docs_idx, result, transcript_file)
     # Check whether to exit the program
     # If no relevant result at all, exit
     if feed_prec_int == 0:
@@ -82,20 +84,36 @@ def rf_run(query_list, precision_int, accountKey):
                 	query_list, 1, 0.75, 0.15)
     return new_query
 
+def generate_transcript(query_list, feed_prec_int, relev_docs_idx, result, transcript_file):
+    string_to_publish = '====================='*3+'\n'
+    string_to_publish += 'Precision = {}\n'.format(feed_prec_int/10.0)
+    string_to_publish += 'query: {}\n'.format(' '.join(query_list))
+    string_to_publish += 'Results:\n'
+    for idx,res in enumerate(result):
+        if idx in relev_docs_idx:
+            string_to_publish += 'Relevant: YES\n'
+        else:
+            string_to_publish += 'Relevant: NO\n'
+        string_to_publish += json.dumps(result[idx], indent=4) + '\n'
+    transcript_file.write(string_to_publish)
+
 if __name__ == '__main__':
-
-    # Get accountKey
-    accountKey = 'v2+SSNBtR6FCjUsVvr1uh0oQr99PA3WU7RxbP3g6fzg'
-
+    transcript_file = open('transcript.txt','a')
     # Pass in the query keyword list
-    # query = ['gates','1234jAsdkfjsl']	# for testing
-    query_list = ['gates'] # all lowercase
+    if len(sys.argv) < 4:
+        print '''Usage: python main.py account_key precision query_terms'''
+        exit(0)
+
+    # Get accountKey, precision, query
+    # accountKey = 'v2+SSNBtR6FCjUsVvr1uh0oQr99PA3WU7RxbP3g6fzg'
+    accountKey = sys.argv[1]
+    precision = float(sys.argv[2])
+    query_list = sys.argv[3:]
     print 'Your query: [', ' + '.join(query_list), ']'
     # Pass in the precision@10, but multiply it by 10
-    precision = 0.5
     prec_int = precision * 10
 
     # Get the program started after all parameters are set
     # while loop goes here
     while True:
-        query_list = rf_run(query_list, prec_int, accountKey)
+        query_list = rf_run(query_list, prec_int, accountKey, transcript_file)

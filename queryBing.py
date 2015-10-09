@@ -32,7 +32,7 @@ def processQuery(query, accountKey):
 
     # for skip in range(0, topUrlCount, 50):
     bingUrl = 'https://api.datamarket.azure.com/Bing/Search/Web?Query=%27' + \
-                quoted_query + '%27&$top=50&$format=json&$skip=0'
+                quoted_query + '%27&$top=10&$format=json&$skip=0'
     parsed_result = executeSingleQuery(bingUrl, headers)
 
     if len(parsed_result) < 10:
