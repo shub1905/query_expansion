@@ -115,3 +115,5 @@ if __name__ == '__main__':
     # while loop goes here
     while True:
         query_list = rf_run(query_list, prec_int, accountKey, transcript_file)
+        
+    transcript_file.close()
