@@ -20,7 +20,7 @@ c) Instructions for running the program:
 			source ~/.bashrc
 		3) Login to your CLIC account.
 		4) Run the following commands in your home directory.
-        		ln –s ~coms4705/nltk_data nltk_data
+        		ln –s /home/coms4705/nltk_data/ nltk_data
 	2. Run the program
     	(Please insert instructions here)
 

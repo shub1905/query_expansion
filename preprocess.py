@@ -1,9 +1,20 @@
 import pickle
 import math
 import numpy as np
-from nltk.tokenize import RegexpTokenizer
-from nltk.corpus import stopwords
-from nltk.stem.snowball import SnowballStemmer
+import os
+
+try:
+	from nltk.tokenize import RegexpTokenizer
+	from nltk.corpus import stopwords
+	from nltk.stem.snowball import SnowballStemmer
+except:
+	os.system('export PYTHONPATH=$PYTHONPATH:/home/cs4701/python/lib/python2.7/site-packages')
+	os.system('mkdir -p ~/nltk_data')
+	os.system('ln –s /home/coms4705/nltk_data/ nltk_data')
+	from nltk.tokenize import RegexpTokenizer
+	from nltk.corpus import stopwords
+	from nltk.stem.snowball import SnowballStemmer
+
 from collections import defaultdict
 
 def remove_stop_words(tokens):
